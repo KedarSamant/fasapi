@@ -9,3 +9,6 @@ def read_root():
     return {'message':'hello world'}# FastAPI automatically converts this dict to JSON format.
 
 
+@app.get('/items/{itemid}')
+def read_item(itemid:int):
+    return {'itemid':itemid,'message': f'u requested item is {itemid}'}
